@@ -75,3 +75,13 @@ function drawShape(ctx, shape, startX, startY, endX, endY, color) {
             break;
     }
 }
+
+// Event listener for color picker input
+document.getElementById('colorPicker').addEventListener('input', (e) => {
+    color = e.target.value; // Update color based on user selection
+});
+
+// Event listener for clear canvas button
+document.getElementById('clearCanvas').addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear the entire canvas
+});
